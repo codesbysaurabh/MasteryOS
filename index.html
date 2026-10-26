@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MasteryOS</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1 data-action="home"><img class="brand" src="images/logo.svg" alt="">MasteryOS</h1>
+    <div>
+      <button data-action="addSkillDialog">Add skill</button>
+      <button class="ghost" data-action="settingsDialog">Settings</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- Shows while a study timer is running -->
+  <div id="timerbar" hidden></div>
+
+  <!-- One reusable popup for "Add skill" and "Settings" -->
+  <dialog id="dlg"></dialog>
+
+  <footer>Prebuilt topic lists are inspired by the roadmaps on roadmap.sh.</footer>
+
+  <!-- Plain scripts, loaded in order. No build step, works by double-clicking this file. -->
+  <script src="js/skills-data.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/revision.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
